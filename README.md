@@ -61,3 +61,6 @@ I want a beautiful frontend
 ## Mockup
 
 ![GitHub profile viewer](https://makersacademy.mybalsamiq.com/mockups/2895691.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
+
+# Team
+Michael, Hanna, Heather, Lou & Eirik. 

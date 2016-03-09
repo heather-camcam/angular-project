@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/heather-camcam/angular-project.png?label=ready&title=Ready)](https://waffle.io/heather-camcam/angular-project)
 # angular-project
 
 Makers Academy Week 8 Angular Project

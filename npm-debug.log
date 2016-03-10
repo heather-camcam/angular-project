@@ -1,40 +1,45 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli [ '/Users/michaelcollins/.nvm/versions/node/v5.0.0/bin/node',
+1 verbose cli   '/Users/michaelcollins/.nvm/versions/node/v5.0.0/bin/npm',
 1 verbose cli   'run',
 1 verbose cli   'protractor' ]
-2 info using npm@2.14.12
-3 info using node@v4.3.2
+2 info using npm@3.3.6
+3 info using node@v5.0.0
 4 verbose run-script [ 'preprotractor', 'protractor', 'postprotractor' ]
-5 info preprotractor gitHubSearch@1.5.0
-6 info protractor gitHubSearch@1.5.0
-7 verbose unsafe-perm in lifecycle true
-8 info gitHubSearch@1.5.0 Failed to exec protractor script
-9 verbose stack Error: gitHubSearch@1.5.0 protractor: `protractor test/protractor-conf.js`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at EventEmitter.emit (events.js:172:7)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at ChildProcess.emit (events.js:172:7)
-9 verbose stack     at maybeClose (internal/child_process.js:821:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-10 verbose pkgid gitHubSearch@1.5.0
-11 verbose cwd /Users/eirikwiig/Projects/Course/week8/angular-project
-12 error Darwin 14.0.0
-13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "protractor"
-14 error node v4.3.2
-15 error npm  v2.14.12
-16 error code ELIFECYCLE
-17 error gitHubSearch@1.5.0 protractor: `protractor test/protractor-conf.js`
-17 error Exit status 1
-18 error Failed at the gitHubSearch@1.5.0 protractor script 'protractor test/protractor-conf.js'.
-18 error This is most likely a problem with the gitHubSearch package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     protractor test/protractor-conf.js
-18 error You can get their info via:
-18 error     npm owner ls gitHubSearch
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+5 info lifecycle gitHubSearch@1.5.0~preprotractor: gitHubSearch@1.5.0
+6 silly lifecycle gitHubSearch@1.5.0~preprotractor: no script for preprotractor, continuing
+7 info lifecycle gitHubSearch@1.5.0~protractor: gitHubSearch@1.5.0
+8 verbose lifecycle gitHubSearch@1.5.0~protractor: unsafe-perm in lifecycle true
+9 verbose lifecycle gitHubSearch@1.5.0~protractor: PATH: /Users/michaelcollins/.nvm/versions/node/v5.0.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/michaelcollins/Projects/angular-project/node_modules/.bin:/Users/michaelcollins/.rvm/gems/ruby-2.2.3/bin:/Users/michaelcollins/.rvm/gems/ruby-2.2.3@global/bin:/Users/michaelcollins/.rvm/rubies/ruby-2.2.3/bin:/Users/michaelcollins/.nvm/versions/node/v5.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/michaelcollins/.rvm/gems/ruby-2.2.3/bin:/Users/michaelcollins/.rvm/gems/ruby-2.2.3@global/bin:/Users/michaelcollins/.rvm/rubies/ruby-2.2.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/michaelcollins/.rvm/bin
+10 verbose lifecycle gitHubSearch@1.5.0~protractor: CWD: /Users/michaelcollins/Projects/angular-project
+11 silly lifecycle gitHubSearch@1.5.0~protractor: Args: [ '-c', 'protractor test/protractor-conf.js' ]
+12 silly lifecycle gitHubSearch@1.5.0~protractor: Returned: code: 1  signal: null
+13 info lifecycle gitHubSearch@1.5.0~protractor: Failed to exec protractor script
+14 verbose stack Error: gitHubSearch@1.5.0 protractor: `protractor test/protractor-conf.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/Users/michaelcollins/.nvm/versions/node/v5.0.0/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/michaelcollins/.nvm/versions/node/v5.0.0/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid gitHubSearch@1.5.0
+16 verbose cwd /Users/michaelcollins/Projects/angular-project
+17 error Darwin 15.2.0
+18 error argv "/Users/michaelcollins/.nvm/versions/node/v5.0.0/bin/node" "/Users/michaelcollins/.nvm/versions/node/v5.0.0/bin/npm" "run" "protractor"
+19 error node v5.0.0
+20 error npm  v3.3.6
+21 error code ELIFECYCLE
+22 error gitHubSearch@1.5.0 protractor: `protractor test/protractor-conf.js`
+22 error Exit status 1
+23 error Failed at the gitHubSearch@1.5.0 protractor script 'protractor test/protractor-conf.js'.
+23 error This is most likely a problem with the gitHubSearch package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     protractor test/protractor-conf.js
+23 error You can get their info via:
+23 error     npm owner ls gitHubSearch
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

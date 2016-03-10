@@ -1,6 +1,5 @@
 githubUserSearch.controller("searchController", function(){
   var self = this;
-  self.searchTerm = ""
 
   var searchResult = [
     {
@@ -19,6 +18,10 @@ githubUserSearch.controller("searchController", function(){
       "avatar_url": "https://avatars.githubusercontent.com/u/3?v=3",
     }
   ]
+
+  self.doSearch = function(searchTerm) {
+    return searchResult;
+  };
 
 
 

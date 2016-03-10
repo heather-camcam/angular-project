@@ -23,6 +23,7 @@
       <li class="user-profile" ng-repeat="user in searchCtrl.doSearch('test')">
 
       {{user.login}}
+      <img ng-src = "{{user.avatar_url}}" class = "user-avatar" height = "50"></img>
 
       </li>
     </ul>

@@ -14,4 +14,18 @@ describe ("User list", function(){
     var userAvatarUrlThree = element.all(by.css('.user-avatar')).last().getAttribute('src');
     expect(userAvatarUrlThree).toEqual("https://avatars.githubusercontent.com/u/3?v=3");
   });
+
+  it ("shows the number of repos for each user",function(){
+    browser.get("http://localhost:8000");
+    var userRepos = element.all(by.css('.user-repos'));
+    expect(userRepos.count()).toBe(3);
+    expect(userRepos.first().getText()).toEqual('10');
+  });
+
+  it ("shows the number of repos for each user",function(){
+    browser.get("http://localhost:8000");
+    var userFollowers = element.all(by.css('.user-followers'));
+    expect(userFollowers.count()).toBe(3);
+    expect(userFollwers.first().getText()).toEqual('10');
+  });
 });

@@ -9,3 +9,4 @@ describe('factory: search', function() {
       ctrl = $controller('searchController');
     });
   });
+});

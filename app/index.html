@@ -15,15 +15,17 @@
   <body>
     <h1>GitHub Profile Search</h1>
     <form class="search-box">
-      <input type="text" placeholder="username">
+      <input type="text" placeholder="Enter a GitHub username">
       <input type="submit" id="submit" value="Search" >
     </form>
 
     <ul class="list-group" ng-controller="searchController as searchCtrl">
       <li class="user-profile" ng-repeat="user in searchCtrl.doSearch('test')">
-
-      {{user.login}}
       <img ng-src = "{{user.avatar_url}}" class = "user-avatar" height = "50"></img>
+      {{user.login}}
+      <p>Public repos: <span class="user-repos">{{user.public_repos}}</span></p>
+      <p>User followers: <span class="user-followers">{{user.followers}}</span></p>
+
 
       </li>
     </ul>

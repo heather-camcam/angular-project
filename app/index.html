@@ -9,22 +9,24 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers/searchController.js"></script>
   </head>
 
   <body>
     <h1>GitHub Profile Search</h1>
     <form class="search-box">
       <input type="text" placeholder="username">
-      <input type="submit" value="Search" ng-click="searchController.doSearch">
+      <input type="submit" id="submit" value="Search" >
     </form>
 
-    <ul class="list-group" ng-controller="userList as users">
-      <li class="list-group-item" ng-repeat="user in usersList.searchResult">
-        <img bg-src="{{user.avatar_url}}">
-        Username: {{users.login}}
+    <ul class="list-group" ng-controller="searchController as searchCtrl">
+      <li class="list-group-item" ng-repeat="user in searchCtrl.searchResult">
+        User 1
+        <!-- <img bg-src="{{user.avatar_url}}"> -->
+        <!-- Username: {{users.login}}
         Name: {{users.name}}
         Number of followers: {{users.followers}}
-        Number of repos: {{users.public_repos}}
+        Number of repos: {{users.public_repos}} -->
       </li>
     </ul>
 

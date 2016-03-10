@@ -5,8 +5,11 @@ describe('searchController', function() {
 
   beforeEach(function(){
     module("GithubUserSearch");
-    inject(function($controller){
+    inject(function($controller, _$httpbackend_){
       ctrl = $controller('searchController');
+      $httpBackend = _$httpBackend_;
+      $httpBackend.expectGET('githubData/users.json').respond([{username: 'Hannah'}, {username: 'Eirik'}, {username: 'Michael'}]);
+
     });
   });
 
@@ -34,15 +37,25 @@ describe('searchController', function() {
   //   expect(ctrl.searchTerm).toBeUndefined();
   // });
 
-  it("it finds filters the user", function(){
-    ctrl.searchResult("pjhyett");
-    expect(ctrl.result.length).toBe(1);
+  // it("it finds filters the user", function(){
+  //   ctrl.searchResult("pjhyett");
+  //   expect(ctrl.result.length).toBe(1);
+  // });
+  //
+  // it("finds the correct user", function(){
+  //   ctrl.searchResult("pjhyett");
+  //   expect(ctrl.result[0].login).toEqual("pjhyett")
+  // });
+
+  // it("recieves the users input in the search bar", function(){
+  //   ctrl.doSearch('test')
+  //   expect(ctrl.searchTerm).toBe('test');
+  // });
+
+  it("returns the search result", function() {
+    expect(ctrl.doSearch('test')).toEqual(userList);
   });
 
-  it("finds the correct user", function(){
-    ctrl.searchResult("pjhyett");
-    expect(ctrl.result[0].login).toEqual("pjhyett")
-  });
 
 
 });

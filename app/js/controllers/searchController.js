@@ -1,7 +1,13 @@
-githubUserSearch.controller("searchController", function(){
+githubUserSearch.controller("searchController", ['$resource', function($resource){
   var self = this;
 
-  var searchResult = [
+  self.searchTerm = "";
+
+  var searchResource = $resource('https://api.github.com/search/users');
+
+
+
+  self.searchResult = [
     {
       "login": "mojombo",
       "id": 1,
@@ -25,10 +31,21 @@ githubUserSearch.controller("searchController", function(){
     }
   ]
 
+  self.makeSearch = function(){
+    self.searchResult = searchResource.get(
+      {q: self.searchTerm }
+    );
+
+  }
+
   self.doSearch = function(searchTerm) {
-    return searchResult;
+    return self.searchResult;
   };
 
+  // self.doSearch2 = searchResource.get(
+  //   { q: self.searchTerm }
+  // );
 
 
-});
+
+}]);

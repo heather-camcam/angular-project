@@ -1,9 +1,8 @@
 githubUserSearch.controller("searchController", function(){
   var self = this;
-  self.result = [];
   self.searchTerm = ""
 
-  var userList = [
+  var searchResult = [
     {
       "login": "mojombo",
       "id": 1,
@@ -22,13 +21,5 @@ githubUserSearch.controller("searchController", function(){
   ]
 
 
-  self.searchResult = function(searchTerm) {
-    for (var i = 0; i < userList.length; i++) {
-      if (userList[i].login === searchTerm) {
-        self.result.push(userList[i]);
-      }
-    }
-    return self.result;
-  };
 
 });

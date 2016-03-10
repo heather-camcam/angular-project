@@ -28,7 +28,7 @@ describe('searchController', function() {
     }
   ]
 
-  // 
+  //
   // it("has an undefined search result", function(){
   //   expect(ctrl.searchResult).toBeUndefined();
   //   expect(ctrl.searchTerm).toBeUndefined();

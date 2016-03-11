@@ -12,21 +12,21 @@
     <script src="js/controllers/searchController.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="searchController as searchCtrl">
     <h1>GitHub Profile Search</h1>
     <form class="search-box">
-      <input type="text" placeholder="username">
-      <input type="submit" id="submit" value="Search" >
+      <input type="text" ng-model="searchCtrl.searchTerm" placeholder="Enter a GitHub username">
+      <input type="submit" id="submit" ng-click="searchCtrl.makeSearch()" value="Search" >
     </form>
 
-    <ul class="list-group" ng-controller="searchController as searchCtrl">
-      <li class="list-group-item" ng-repeat="user in searchCtrl.searchResult">
-        User 1
-        <!-- <img bg-src="{{user.avatar_url}}"> -->
-        <!-- Username: {{users.login}}
-        Name: {{users.name}}
-        Number of followers: {{users.followers}}
-        Number of repos: {{users.public_repos}} -->
+    <ul class="list-group" >
+      <li class="user-profile" ng-repeat="user in searchCtrl.searchResult">
+      <img ng-src = "{{user.avatar_url}}" class = "user-avatar" height = "50"></img>
+      {{user.login}}
+      <p>Public repos: <span class="user-repos">{{user.public_repos}}</span></p>
+      <p>User followers: <span class="user-followers">{{user.followers}}</span></p>
+
+
       </li>
     </ul>
 

@@ -1,28 +1,28 @@
-githubUserSearch.controller("searchController", function(){
+githubUserSearch.controller("searchController", ['$resource', function($resource){
   var self = this;
 
-  var searchResult = [
-    {
-      "login": "mojombo",
-      "id": 1,
-      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=3",
-    },
-    {
-      "login": "defunkt",
-      "id": 2,
-      "avatar_url": "https://avatars.githubusercontent.com/u/2?v=3",
-    },
-    {
-      "login": "pjhyett",
-      "id": 3,
-      "avatar_url": "https://avatars.githubusercontent.com/u/3?v=3",
-    }
-  ]
+  self.searchTerm = "";
 
-  self.doSearch = function(searchTerm) {
-    return searchResult;
-  };
+  var searchResource = $resource('https://api.github.com/search/users');
 
+  self.searchResult = []
+  self.userResult = []
+  self.followers = []
+  self.repos = []
 
+    self.makeSearch = function(){
 
-});
+      searchResource.get(
+        {q: self.searchTerm, access_token: }).$promise.then(function(data){
+          self.searchResult =  data.items;
+      })
+
+      var other = $resource('https://api.github.com/users/' + 'mojombo' + '?access_token=');
+
+      other.get().$promise.then(function(data){
+          self.followers =  data.followers;
+          self.repos = data.public_repos;
+      })
+    };
+
+}]);

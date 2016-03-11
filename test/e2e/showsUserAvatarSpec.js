@@ -1,12 +1,11 @@
 describe("gitHubSearch", function(){
-  it('filters by the search term',function(){
+  it ("displays an avatar for each user searched for", function(){
     browser.get("http://localhost:8000");
     var searchTerm = element(by.model('searchCtrl.searchTerm'));
     var submit = $('#submit');
     searchTerm.sendKeys('mojombo');
     submit.click();
-    var users = element.all(by.css('.user-profile'));
-    expect(users.count()).toBe(1);
+    var userAvatarUrl = element.all(by.css('.user-avatar')).first().getAttribute('src');
+    expect(userAvatarUrl).toEqual("https://avatars.githubusercontent.com/u/1?v=3");
   });
-
 });

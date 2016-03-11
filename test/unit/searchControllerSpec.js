@@ -14,14 +14,14 @@ describe('searchController', function() {
      beforeEach(inject(function($httpBackend){
        httpBackend = $httpBackend
        httpBackend
-         .when("GET", 'https://api.github.com/search/users?q=name')
+         .when("GET", 'https://api.github.com/search/users?q=username')
          .respond(
            { name: 'Dave' }
          );
      }));
 
      it('displays search results', function(){
-       ctrl.searchTerm = 'name';
+       ctrl.searchTerm = 'username';
        ctrl.makeSearch();
        httpBackend.flush();
        expect(ctrl.searchResult.name).toEqual('Dave');
